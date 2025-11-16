@@ -9,6 +9,10 @@ app.use('/products', productsRouter)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.get('/', (req, res) =>{
+    return res.send('Hi!')
+})
+
 
 app.listen(port, () => {
     console.log(`Store app listening on port ${port}`)
