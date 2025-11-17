@@ -4,12 +4,12 @@ import productsRouter from './modules/products/products.router'
 const app = express()
 const port = 8888
 
-app.use('/products', productsRouter)
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) =>{
+app.use('/products', productsRouter)
+
+app.get('/', (req, res) => {
     return res.send('Hi!')
 })
 
